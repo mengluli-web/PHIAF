@@ -37,11 +37,18 @@ python generate_data.py   ####using GAN to generate pseudo positive samples
 python main.py
 ```
 
-Users can use their own data to train prediction models. First, using code/compute_dna_features.py and code/compute_protein_features.py to compute the features derived from DNA and protein sequences. 
+Users can use their **own data** to train prediction models. 
 
-In code/compute_dna_features.py, users need install iLearn tool [https://ilearn.erc.monash.edu/ or https://github.com/Superzchen/iLearn] and prepare .fasta file, this file is DNA sequences of all phages/hosts. 
+For **new host/phage**, users can download the DNA and protein sequences from the NCBI database, and use code/compute_dna_features.py and code/compute_protein_features.py to compute the features derived from DNA and protein sequences.
 
-In code/compute_protein_features.py, users need prepare .gb file of every phage/host, which download from NCBI database.  Then users using generate_data.py and main.py to predict PHI.
+**Note:** 
+
+In code/compute_dna_features.py, users need to install the iLearn tool [https://ilearn.erc.monash.edu/ or https://github.com/Superzchen/iLearn] and prepare .fasta file, this file is DNA sequences of all phages/hosts. (when you use iLearn to compute the DNA features, you should set the parameters k of Kmer and RCKmer as 3, not 2.)
+
+In code/compute_protein_features.py, users need to prepare a .gb file of every phage/host.  
+
+Then users use generate_data.py and main.py to predict PHI.
+
 
 #### Contact
 
