@@ -13,6 +13,7 @@ Menglu Li (mengluli@foxmail.com) and Wen Zhang (zhangwen@mail.hzau.edu.cn) from 
 - data/phage_protein_normfeatures is a set of files with features encoded by protein sequences corresponding to all phages.
 - data/host_protein_normfeatures is a set of files with features encoded by protein sequences corresponding to all hosts.
 - data/data_pos_neg.txt is the dataset used to train and test prediction model, which contain 312 positive and 312 negative samples (304 phages and 235 hosts).
+- data/alldata.txt is phage-host interactions extracted from databases, which contain 5399 interactions between 5331 phages and 235 hosts.
 
 #### Code
 
