@@ -111,6 +111,9 @@ host_feature_dna=obtainfeatures(host,'../data/host_dna_norm_features/','.txt')
 phage_all=np.concatenate((phage_feature_dna, phage_feature_pro),axis=1)
 host_all=np.concatenate((host_feature_dna, host_feature_pro),axis=1)
 ###save features of real positive samples
+if not os.path.exists('../result/'):
+    os.mkdir('../result')
+    os.mkdir('../result/result_GAN')
 np.savetxt('../result/result_GAN/data_GAN.txt',np.concatenate((phage_all, host_all),axis=1))
 data = inf_train_gen('data_GAN')
 FIXED_GENERATOR = False  
